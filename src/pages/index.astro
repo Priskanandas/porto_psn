@@ -1,11 +1,174 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Project from '../components/Project.astro';
+import ProjectDetail from '../components/ProjectDetail.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const startCareer = 2019;
+const experience = new Date().getFullYear() - startCareer;
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Priskananda Surya Nindiya | Full Stack Developer">
+	<main>
+		<!--================ Start Home Banner Area =================-->
+		<section class="home_banner_area" id="home">
+			<div class="banner_inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="banner_content">
+								<h3 class="text-uppercase">Hello</h3>
+								<h1 class="text-uppercase">I am Priskananda Surya Nindiya</h1>
+								<h5 class="text-uppercase">Full Stack Developer</h5>
+								<div class="d-flex align-items-center">
+									<a class="primary_btn" href="#contact"><span>Get In Touch</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="profile_img">
+								<img class="img-fluid" src="img/banner/home-right.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<!--================ End Home Banner Area =================-->
+
+		<!--================ Start About Us Area =================-->
+		<section class="about_area" id="about">
+			<div class="container">
+				<div class="row justify-content-start">
+					<div class="col-lg-5">
+						<div class="about_img">
+							<img src="img/about-us.png" alt="">
+						</div>
+					</div>
+
+					<div class="offset-lg-1 col-lg-5">
+						<div class="main_title text-left">
+							<h2>let’s <br>
+								Introduce about <br>
+								myself</h2>
+							<p>
+								Love to learn something new and easy going. Experienced in {experience}+ years being programmer, I have working on variety project website and apps. 
+							</p>
+							<a class="primary_btn" target="_blank" href="https://drive.google.com/file/d/1sX0BXHr6mGpumvDxjkvYJXp9ydZgQF3l/view?usp=sharing"><span>Download CV</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--================ End About Us Area =================-->
+
+		<!--================ Start Projects Area =================-->
+		<section class="projects_area" id="projects">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8 text-center">
+						<div class="main_title">
+							<h2>Projects</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<Project 
+						title="SuryaPOS" 
+						img="/img/portfolio/warung_dashboard.jpeg"
+						about="SuryaPOS is a web-based shop management application designed with multi-user and multi-database support. Each store can independently manage its inventory, purchases, sales, and financial reports within a single platform. The project was built to help small to medium-sized retail businesses operate efficiently, featuring fast item search, transaction recording, receipt printing, and a modern dark mode UI. Through this project, I gained valuable experience in building multi-tenant architecture, handling complex data relationships, and optimizing user experience."
+						stacks={["PHP", "Laravel", "Blade", "MySQL", "JavaScript", "jQuery", "Bootstrap", "AJAX", "Livewire"]}
+						website=""
+						github="https://github.com/Priskanandas/manajemen_warung"
+						/>
+
+
+					<Project 
+						title="Surya Catering" 
+						img="/img/portfolio/catering_home.jpeg"
+						about="Surya Catering is an online catering management system that streamlines customer orders, menu scheduling, and payment tracking. It includes features like daily/weekly menu display, automated delivery schedule generation, transaction history, and user-friendly admin management. This project helped me explore building a structured order workflow, integrating recurring schedules, and improving UX for both customers and admins."
+						stacks={["PHP", "Laravel", "Blade", "MySQL", "Bootstrap", "JavaScript", "jQuery", "FullCalendar", "SweetAlert"]}
+						website=""
+						github="https://github.com/Priskanandas/Pemesanan-Snack-Catering"
+						/>
+
+
+					<Project 
+						title="Movies" 
+						img="/img/portfolio/bioskop_home.jpeg"
+						about="Movies is a cinema ticket booking web application that allows users to browse movies, view schedules, select seats, and book tickets in real-time. The system includes an admin dashboard for managing films, showtimes, and bookings. This project allowed me to learn about building dynamic UI for seat selection, real-time availability checks, and structured CRUD for cinema operations."
+						stacks={["PHP", "Laravel", "Blade", "MySQL", "JavaScript", "jQuery", "Bootstrap", "FullCalendar", "SweetAlert"]}
+						website=""
+						github=""
+						/>
+
+
+					<Project 
+						title="Course Private" 
+						img="/img/portfolio/kursus_dasbor.jpeg"
+						about="Course Private is a web-based platform for managing private tutoring sessions between students and tutors. It features user registration, tutor scheduling, class management, progress tracking, and payment history. Admins can manage users, subjects, and schedules through a dedicated dashboard. This project helped me deepen my understanding of booking systems, role-based access control, and structured data flow between tutors and learners."
+						stacks={["PHP", "Laravel", "Blade", "MySQL", "Bootstrap", "JavaScript", "jQuery", "FullCalendar", "SweetAlert"]}
+						website=""
+						github="https://github.com/Priskanandas/kursus-online"
+						/>
+
+					
+				</div>
+
+			</div>
+		</section>
+		<!--================ End Projects Area =================-->
+
+		<!--================ Start Contact Area =================-->
+		<section class="contact-area" id="contact">
+			<div class="container">
+				<div class="row justify-content-center align-items-center">
+					<div class="col-12 col-sm-12 col-md-8">
+						<div class="main_title">
+							<h2>CONTACT ME </h2>
+						</div>
+
+						<div class="card p-4 shadow border-0">
+							<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzSfSfkYrTQEmfDDWJQATRFbu9TZNY2W84RSl9CMFogpzLCflQ1X7Gocj-6JsIiZssTuw/exec">
+								<div class="form-group">
+									<label for="name">Email:</label>
+									<input id="form-email" class="form-control col-12" placeholder="Enter Your Email" type="email" name="email" required>
+								</div>
+	
+								<div class="form-group">
+									<label for="name">Name:</label>
+									<input id="form-name" class="form-control col-12" placeholder="Enter Your Name" type="text" name="name" required>
+								</div>
+	
+								<div class="form-group">
+									<label for="name">Message:</label>
+									<textarea id="form-message" class="form-control col-12" placeholder="Enter Your Message" rows="8" name="message" required></textarea>
+								</div>
+	
+								<button class="primary_btn float-right mt-1 btn-block" type="submit">
+									<span>Send Message</span>
+								</button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--================ End Newsletter Area =================-->
+		
+		<ProjectDetail />
+	</main>
 </Layout>
+
+<script is:inline type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+	(function(){
+	   emailjs.init("JUMAkpW3rGZb8oU_U");
+	})();
+ </script>
